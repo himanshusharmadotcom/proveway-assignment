@@ -48,7 +48,7 @@ ul{
 /* pricing info style */
 
 .pricing-info{
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
