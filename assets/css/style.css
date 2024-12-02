@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* default color and styling */
+
+:root {
+    --primaryColor: #FF6B82;
+    --greyColor: #C8C8C8;
+    --blackColor: #000000;
+    --textColor: #000000;
+
+    /* Font and Typography */
+
+    --textFontSize: 14px;
+    --smallTextFontSize: 10px;
+    --textFontWeight: 500;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+/* pricing info style */
+
+.pricing-info{
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* heading style */
+
+.pr-head{
+    margin-bottom: 25px;
+}
+
+.pricing-info h1{
+    text-align: center;
+    position: relative;
+}
+
+.pricing-info h1 span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--primaryColor);
+    position: relative;
+    z-index: 999;
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+.pricing-info h1:before{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--greyColor);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* pricing box style */
+
+.pr-box{
+    position: relative;
+}
+
+.pr-box-body{
+    border: 1px solid var(--greyColor);
+    max-height: 100px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.pr-box-body.active{
+    max-height: 245px;
+    background-color: #FFF9FA;
+    border: 2px solid var(--primaryColor);
+}
+
+.pr-box-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 20px;
+    cursor: pointer;;
+}
+
+.pr-box .left-span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pr-box input[type="radio"]{
+    accent-color: var(--primaryColor);
+}
+
+.pr-box .radio-label p:nth-child(1){
+    font-size: var(--textFontSize);
+    font-weight: var(--textFontWeight);
+}
+
+.pr-box .discount-badge{
+    background-color: var(--primaryColor);
+    color: #fff;
+    font-weight: unset;
+    padding: 5px 7px;
+    margin-left: 4px;
+}
+
+.pr-box .radio-label p:nth-child(2){
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.pr-box .right-span p:nth-child(1){
+    font-size: var(--textFontSize);
+    font-weight: var(--textFontWeight);
+}
+
+.pr-box .right-span p:nth-child(2){
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #9b9b9b;
+}
+
+/* plan head style */
+
+.plan-detail{
+    padding: 0 40px 40px;
+}
+
+.plan-detail table{
+    border-spacing: 10px;
+}
+
+.plan-detail table select{
+    width: 100%;
+    border: 1px solid var(--greyColor);
+    padding: 5px;
+    outline: none;
+}
+
+/* popular badge style */
+
+.popular-badge{
+    position: absolute;
+    right: 6.5px;
+    top: -12px;
+    background-color: var(--primaryColor);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: var(--textFontSize);
+    font-weight: var(--textFontWeight);
+    padding: 6px 8px;
+    border-radius: 0 0 5px 5px;
+}
+
+.popular-badge:before{
+    content: '';
+    background-color: #D7445B;
+    position: absolute;
+    left: -30%;
+    top: 0;
+    height: 12px;
+    width: 160%;
+    transform: rotateY(45deg);
+    clip-path: polygon(6% 0%, 94.5% 0%, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
+/* pricing bottom style */
+
+.pr-bottom{
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pr-bottom p{
+    font-size: var(--textFontSize);
+    font-weight: var(--textFontWeight);
+}
+
+.pr-bottom p:nth-child(1){
+    color: var(--primaryColor);
+}
+
+/* submit button style */
+
+.pricing-info form input[type="submit"]{
+    background-color: var(--primaryColor);
+    padding: 15px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+/* watermark style */
+
+.watermark{
+    font-style: italic;
+    font-size: var(--smallTextFontSize);
+    color: #9b9b9b;
+    text-align: right;
+}
